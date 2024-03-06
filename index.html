@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Based Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div id="one-content" class="container">
+        <h1>Welcome Adventurer!</h1>
+        <label for="name-input">Who are you?</label>
+        <input id="name-input" type="text" placeholder="Enter your wonderful name:">
+        <button id="start-button" onclick="startGame()">Let us begin...</button>
+    </div>
+    <div id="two-content" class="container" style="display: none;">
+        <h1>Thank the 300 Lords <span id="playerNameDisplay"></span>!</h1>
+        <p>You look like a capable person, <span id="playerNameDisplayParagraph"></span>. Will you please, for the love of the Lords, help us?</p>
+        <button id="option1">I would love to. What do you need?</button>
+        <button id="option2">I would absolutely hate that.</button>
+        <button id="two-content-back">Back</button>
+    </div>
+    <div id="two-option1" class="container" style="display: none;">
+        <h1>Thank you, <span id="displayNameTwoYes"></span>!</h1>
+        <p>I can't believe you are going to help us. Here take this sword and follow me.</p>
+        <button id="option1-one">Take sword and follow the man</button>
+        <button id="option1-two">Refuse the sword and tell the man that you like to use your fists (less to carry that way)</button>
+        <button id="two-option1-back">Back</button>
+    </div>
+    <div id="two-option2" class="container" style="display: none;">
+        <h1>Away with you! You are shunned from the village!</h1>
+        <p>It's too dangerous here anyway...</p>
+        <button id="option2-one">Kill the man</button>
+        <button id="option2-two">Leave and find a less annoying path</button>
+        <button id="two-option2-back">Back</button>
+    </div>
+    <div id="one-one" class="container" style="display: none;">
+        <h1>WOW! <span id=oneOneDisplayName></span> you look like a pro with that thing!</h1>
+        <p>The man leads you into the village and you immediately see what he wants you to do</p>
+        <p>There is a giant scaled, serpent like monster with huge fangs, six legs, and wings attacking the villagers. It's a massacre.</p>
+        <p>The man says "That is the monster Jinoria! <strong>PLEASE</strong> attack her <span id=oneOneTwoDisplayName></span> and save the village from our definite demise!"</p>
+        <button id="one-one-option1">Throw your sword, like a javelin, at the creatures head.</button>
+        <button id="one-one-option2">Run up and slice the monster in half</button>
+        <button id="one-one-back">Back</button>
+    </div>
+    <div id="throw-sword" class="container" style="display: none;">
+        <h1>You throw your sword with the speed of 1,000,000 gazelles straight at the creatures head.</h1>
+        <p>The sword goes straight through, leaving a clean hole in-between the creatures eyes, and wedging itself into a tree.</p>
+        <p>The creature falls down, dead. The whole village cheers your name!</p>
+        <p>They throw you a feast, and give you your pick of any man or woman in the village for you to marry. They also deem the area where your sword landed into the tree as their new monument.</p>
+        <p>As you're eating, one of the 300 Lords shows up behind you and whispers into your ear <strong>"YOU WIN!"</strong>.</p>
+        <button id="throw-sword-newgame">Start New Game?</button>
+    </div>
+    <div id="slice" class="container" style="display: none;">
+        <h1>You run up to Jinoria and with one straight slice, bring your sword, with the force of 6,000,000 earthquakes, straight through the creature, slicing it in half.</h1>
+        <p>Jinorias two halves fall to the side.</p>
+        <p>The force of the slice was so strong it wedged the sword into the ground, impossible to take out.</p>
+        <p>The whole village cheers your name!</p>
+        <p>They throw you a feast, and give you your pick of the men or women in the village to marry. They now worship the spot where your sword is stuck in the ground, forever remembering your name.</p>
+        <p>One of the 300 Lords comes down and sits next to you. He leans over and whispers into your ear <strong>"YOU WIN!"</strong>.</p>
+        <button id="slice-newgame">Start New Game?</button>
+    </div>
+    <div id="one-two" class="container" style="display: none;">
+        <h1>Well, suit yourself I guess.</h1>
+        <p>Take this potion of strength then, you'll need it!</p>
+        <p>You take the potion of strength and chug it down in one gulp.
+            You feel a fire rush through your body as your heart races and you feel your muscles buldge.</p> 
+           <p>You are ready to do this!</p>
+        <p>The man leads you into the village and you immediately see what he wants you to do</p>
+        <p>There is a giant scaled, serpent like monster with huge fangs, six legs, and wings attacking the villagers. It's a massacre.</p>
+        <p>The man says "That is the monster Jinoria! <strong>PLEASE</strong> attack her <span id=oneTwoDisplayName></span> and save the village from our definite demise!"</p>
+        <button id="one-two-option1">Jump in the air and attack the monster from the sky</button>
+        <button id="one-two-option2">Sneak around back and super kame-hame-ha-punch the back of the monsters head</button>
+        <button id="one-two-back">Back</button>
+    </div>
+    <div id="air-attack" class="container" style="display: none;">
+        <h1>You body slam into the creatures back with the force of 1,000,000 asteroids.</h1>
+        <p>Jinoria dies as shes flattened into the ground and her entrails fly all around the village.</p>
+        <p>The whole village cheers your name!</p>
+        <p>They throw a big feast and you get your pick of any of the men or women to marry!</p>
+        <p>One of the 300 Lords comes down, hugs you, and whispers into your ear <strong>"YOU WIN!"</strong>.</p>
+        <button id="air-attack-newgame">Start New Game?</button>
+    </div>
+    <div id="sneak-attack" class="container" style="display: none;">
+        <h1>You sneak around back, wind up your punch, and with the force of 60,000,000 battering rams, punch the back of Jinorias head. Instantly disintegrating it.</h1>
+        <p>The whole village, all though slightly put-off, cheers your name!</p>
+        <p>They throw you a feast and give you your pick of any of the men or women in the village to marry.</p>
+        <p>One of the 300 Lords comes down, grabs your shoulder, and whispers into your ear <strong>"YOU WIN!"</strong>.</p>
+        <button id="sneak-attack-newgame">Start New Game?</button>
+    </div>
+    <div id="two-one" class="container" style="display: none;">
+        <h1>You grab the mans neck.</h1>
+        <p>Using your pressure point annihilation technique you press softly and the man disintegrates.</p>
+        <p>Some of the other villagers saw you murder this poor innocent man. They stone you to death.</p>
+        <p>One of the 300 Lords comes down and whispers loudly into your ear <strong>"YOU LOSE!"</strong>.</p>
+        <button id="two-one-newgame">Start New Game?</button>
+    </div>
+    <div id="two-two" class="container" style="display: none;">
+        <h1>You leave, a bit annoyed.</h1>
+        <p>You smell something cooking in the distance and follow the smell.</p>
+        <p>At the end of the trail is a house. On top of the house there is a billboard that says "Momma's Kitchen". Hungry, you enter.
+            Momma is standing there with a knife, as soon as she sees you she stabs you to death. She bakes you into a pie
+            and serves you to her demon guests.
+        </p>
+        <p>One of the 300 Lords purchases your pie. They whisper loudly into your pie <strong>"YOU LOSE!"</strong>.</p>
+        <button id="two-two-newgame">Start New Game?</button>
+    </div>
+</body>
+</html>

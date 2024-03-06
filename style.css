@@ -1,0 +1,32 @@
+button {
+    display: block;
+    margin-top: 15px;
+    color: tan;
+    background-color: black;
+}
+body {
+    background-color: brown;
+}
+h1 {
+    color: tan;
+}
+label {
+    color: tan;
+}
+p {
+    color: tan;
+}
+#name-input {
+    background-color: black;
+    color: tan;
+}
+::placeholder {
+    color: tan;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+    translate(-50%, -50%);
+}
